@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// UPDATE
+
 router.put("/:id", async (req, res) => {
   try {
     const { name, email, course, age } = req.body;
@@ -58,7 +58,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// DELETE
+
 router.delete("/:id", async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id);
